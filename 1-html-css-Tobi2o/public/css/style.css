@@ -1,0 +1,165 @@
+/* Définition des couleurs de base */
+:root {
+  --couleur-blanc: #ffffff;
+  --couleur-noir: #000000;
+  --gris-clair: #f3f4f6;
+  --gris-moyen: #e5e7eb;
+  --gris-foncé: #9ca3af;
+  --taille-police-grande: 48px; /* Pour les titres */ 
+  --taille-police-principale: 16px; /* Taille de base pour le texte */
+  --taille-police-moyenne: 14px; /* Pour les sous-titres et texte secondaire */
+  --taille-police-petite: 12px; /* Pour les textes plus petits */
+}
+
+/* Style de base pour html et body */
+html, body {
+  height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  color: var(--couleur-noir);
+  background-color: var(--couleur-blanc);
+}
+
+/* Réinitialisation des marges et paddings pour les titres */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles typographiques */
+.sous-titre-principal, .texte-principal, .sous-titre-secondaire, 
+.texte-secondaire, .petit-texte {
+  line-height: 1.5; /* 150% */
+}
+
+.titre-principal {
+  font-size: var(--taille-police-grande);
+  font-weight: bold;
+  line-height: 1.25; /* 125% */
+}
+
+.sous-titre-principal {
+  font-size: var(--taille-police-principale);
+  font-weight: bold;
+
+}
+
+.texte-principal {
+  font-size: var(--taille-police-principale);
+
+}
+
+.sous-titre-secondaire, .texte-secondaire {
+  font-size: var(--taille-police-moyenne);
+  font-weight: bold;
+}
+
+.petit-texte {
+  font-size: var(--taille-police-petite);
+}
+
+/* Mise en page avec grid */
+.agencement {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "main queue"
+    "lecteur lecteur";
+}
+
+.en-tete-conteneur, .informations-conteneur, .playlist, 
+.informations-lecteur, .commandes, .deezer-conteneur {
+  display: flex;
+}
+
+/* Style pour la section principale */
+.main {
+  grid-area: main;
+  margin-left: 86px;
+  padding: 86px 0;
+  overflow: auto;
+}
+
+.en-tete-conteneur {
+  flex-direction: row;
+  gap: 32px;
+}
+
+.informations-conteneur {
+  flex-direction: column;
+  justify-content: flex-end; 
+  gap: 8px; 
+}
+
+.image-piste {
+  width: 250px;
+  height: 250px;
+}
+
+.playlist {
+  flex-direction: column;
+  margin: 48px 0 0 16px;
+  gap: 32px;
+}
+
+/* Style pour le lecteur */
+#player {
+  grid-area: lecteur;
+  display: flex;
+  height: 80px;
+  border-top: var(--gris-moyen) 1px solid;
+  align-items: center;
+}
+
+.informations-lecteur {
+  height: 100%;
+  flex-basis: calc(100%/3); /*un tiers (1/3) de l'espace disponible*/
+}
+
+.couverture  {
+  max-height: 100%;
+  padding-right: 16px;
+}
+
+.commandes {
+  gap: 32px;
+  justify-content: center;
+  flex-basis: calc(100%/3); /*un tiers (1/3) de l'espace disponible*/
+}
+
+.boutons  {
+  height: 40px;
+  width: 40px;
+}
+
+.deezer-conteneur {
+  justify-content: flex-end;
+  padding-right: 16px;
+  flex: 1;
+}
+
+.logo-deezer {
+  width: 150px;
+}
+
+/* Style pour la file d'attente */
+#queue {
+  position: relative;
+  grid-area: queue;
+  width: 330px;
+  background-color: var(--gris-clair);
+  border-left: 1px solid var(--gris-moyen);
+}
+
+.element-haut-gauche {
+  padding-top: 32px;
+  padding-left: 32px;
+}
+
+.element-centre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gris-foncé);
+}

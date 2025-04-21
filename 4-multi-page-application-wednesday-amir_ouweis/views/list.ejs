@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dictons</title>
+  </head>
+  <body>
+    <ul>
+      <% rows.forEach(row => { %>
+      <li><a href="/<%= row.id %>">dicton <%= row.id %></a></li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

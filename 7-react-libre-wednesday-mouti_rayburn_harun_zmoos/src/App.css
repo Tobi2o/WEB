@@ -1,0 +1,36 @@
+.App {
+    text-align: center;
+}
+
+.welcome-text {
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.button-logreg{
+    margin-top: 20px;
+}
+
+.logout-btn {
+    margin-left: 10px;
+    background-color: red;
+}
+
+.join-party-btn {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.create-party-btn{
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.home-btn {
+    margin-top: 20px;
+    color: white;
+    margin-right: 50px;
+}
+

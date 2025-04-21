@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Run Cypress",
+      "setup": "npm install",
+      "run": "npm run test-with-server",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
